@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Titlul din tab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>   <!-- defer = rulează după ce DOM-ul e gata -->
+</head>
+<body>
+  <header>Tema1</header>
+  <main><h1>Jurnal de carti</h1> <article>
+    <form id="formular-carte">
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required autocomplete="email">
+
+  <label for="carte">Adauga carte</label>
+  <input type="text" id="carte" name="carte" required minlength="2">
+
+  <label for="review">Adauga review</label>
+  <input type="text" id="review" name="review" required>
+
+ 
+  <button type="submit">Adauga</button>
+
+  <p id="status-formular" role="status" aria-live="polite"></p>
+</form>
+  </article></main>
+      <section aria-labelledby="titlu-lista">
+      <h2 id="titlu-lista">Cărțile mele</h2>
+
+      <p id="status-lista" role="status" aria-live="polite">
+        Se încarcă lista de cărți...
+      </p>
+
+      <ul id="lista-carti"></ul>
+    </section>
+  </main>
+
+  <footer>Jurnalul meu de lectură</footer>
+</body>
+</html>

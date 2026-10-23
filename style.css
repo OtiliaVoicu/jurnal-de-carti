@@ -1,0 +1,169 @@
+
+/* 1. Stilurile generale */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f5ef;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* 2. Antetul paginii */
+header {
+  background-color: #38594d;
+  color: white;
+  text-align: center;
+  padding: 22px 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* 3. Conținutul principal */
+main {
+  width: min(800px, calc(100% - 32px));
+  margin: 30px auto;
+}
+
+h1 {
+  text-align: center;
+  color: #38594d;
+  margin-bottom: 25px;
+}
+
+h2 {
+  color: #38594d;
+}
+
+/* 4. Formularul */
+article {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cccccc;
+  border-radius: 7px;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: 2px solid #7ba894;
+  border-color: #38594d;
+}
+
+/* 5. Butonul Adaugă */
+button {
+  background-color: #38594d;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 12px 18px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #294338;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* 6. Mesajele formularului */
+#mesaj-formular {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  color: #38594d;
+}
+
+/* 7. Lista de cărți */
+#lista-carti {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#lista-carti li {
+  min-width: 0;
+  background-color: white;
+  border-left: 5px solid #7ba894;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  overflow-wrap: anywhere;
+}
+
+#lista-carti h3 {
+  color: #38594d;
+  margin-top: 0;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+#lista-carti p {
+  color: #555555;
+  font-size: 14px;
+}
+
+/* 8. Mesajul de încărcare sau eroare */
+#status-lista {
+  text-align: center;
+  color: #666666;
+  padding: 10px;
+  overflow-wrap: anywhere;
+}
+
+/* 9. Subsolul paginii */
+footer {
+  text-align: center;
+  padding: 20px 12px;
+  color: #666666;
+  font-size: 14px;
+}
+
+/* 10. Responsive: telefoane */
+@media (max-width: 600px) {
+  main {
+    width: calc(100% - 24px);
+    margin: 20px auto;
+  }
+
+  article {
+    padding: 16px;
+  }
+
+  #lista-carti {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+}
